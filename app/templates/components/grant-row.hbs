@@ -1,0 +1,14 @@
+<div class="grant">
+  <h3>{{grant.title}}</h3>
+  <p>${{grant.amount}}</p>
+  <p>From:
+    {{#link-to "org" grant.field_funder.target_id}}
+      {{grant.field_funder.name}}
+    {{/link-to}}
+  </p>
+  <p>To:
+    {{#link-to "org" grant.field_recipient.target_id}}
+      {{grant.field_recipient.name}}
+    {{/link-to}}
+  </p>
+</div>

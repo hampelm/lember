@@ -10,7 +10,7 @@ export default DS.JSONAPISerializer.extend({
       }
     };
 
-    console.log(payload, newPayload);
+    console.log("Application serialized:", payload, newPayload);
 
     return this._super(store, primaryModelClass, newPayload, id, requestType);
   },

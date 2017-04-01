@@ -1,5 +1,26 @@
-<h2>{{model.title}}</h2>
+<h1>{{ model.org.title}}</h1>
 
-<h3>{{ model.org_grants_received}} Received</h3>
+{{ model.org.description }}
 
-<h3>{{ model.org_grants_funded }} Funded</h3>
+<h2>${{ model.org.received}} Received</h2>
+
+<h2>${{ model.org.funded }} Funded</h2>
+
+{{#each model.org.news as |news|}}
+  {{#news-item news=news }}{{/news-item}}
+{{/each}}
+
+
+<h2>Grants receved</h2>
+
+{{#each model.grantsReceived as |grant|}}
+  {{#grant-row grant=grant }}{{/grant-row}}
+{{/each}}
+
+
+
+<h2>Grants funded</h2>
+
+{{#each model.grantsFunded as |grant|}}
+  {{#grant-row grant=grant }}{{/grant-row}}
+{{/each}}
